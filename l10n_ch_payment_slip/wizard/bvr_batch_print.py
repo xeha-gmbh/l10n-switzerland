@@ -30,7 +30,7 @@ class BvrBatchPrintWizard(models.TransientModel):
     def check_generatable(self, invoices):
         try:
             invoices._check_bvr_generatable()
-        except UserError, e:
+        except UserError as e:
             return e.name
 
     @api.multi
